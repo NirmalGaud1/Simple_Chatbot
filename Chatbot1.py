@@ -12,7 +12,7 @@ API_KEY = "AIzaSyBsq5Kd5nJgx2fejR77NT8v5Lk3PK4gbH8"
 
 # Configure the generative model
 genai.configure(api_key=API_KEY)
-model = genai.GenerativeModel('gemini-pro')
+model = genai.GenerativeModel('gemini-flash')
 
 # Initialize chat session
 if "chat" not in st.session_state:
