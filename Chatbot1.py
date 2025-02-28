@@ -16,6 +16,7 @@ if "chat" not in st.session_state:
     st.session_state.chat = model.start_chat(history=[])
 
 st.title("🤖 Chatbot - Your AI Assistant")
+st.write('This is an AI Chatbot to solve your queries......')
 
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -25,7 +26,6 @@ for message in st.session_state.messages:
         st.markdown(message["content"])
 
 if prompt := st.chat_input("Say something..."):
-    # Add user message to chat history
     st.session_state.messages.append({"role": "user", "content": prompt})
     with st.chat_message("user"):
         st.markdown(prompt)
